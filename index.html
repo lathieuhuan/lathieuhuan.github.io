@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <!-- css -->
@@ -18,12 +18,21 @@
   <style id="global-style"></style>
   <body>
     <main>
-      <div id="left-col">
-        <div class="left-col-inner">
-          <div class="avatar">Image</div>
+      <div id="left-column">
+        <div id="avatar">
+          <div
+            style="
+              width: 100%;
+              height: 100%;
+              background-color: white;
+              border-radius: 50%;
+            "
+          ></div>
+        </div>
 
+        <div id="brief-info">
           <section id="skills">
-            <h3>Skills</h3>
+            <h2>Skills</h2>
             <ul class="section-content">
               <li><span>Javascript</span></li>
               <li><span>React</span></li>
@@ -34,7 +43,7 @@
           </section>
 
           <section id="contact">
-            <h3>Contact</h3>
+            <h2>Contact</h2>
             <ul class="section-content">
               <li>
                 <span class="flex items-start">
@@ -67,7 +76,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M424 80H88a56.06 56.06 0 0 0-56 56v240a56.06 56.06 0 0 0 56 56h336a56.06 56.06 0 0 0 56-56V136a56.06 56.06 0 0 0-56-56zm-14.18 92.63-144 112a16 16 0 0 1-19.64 0l-144-112a16 16 0 1 1 19.64-25.26L256 251.73l134.18-104.36a16 16 0 0 1 19.64 25.26z"
+                      d="M424 80H88a56.06 56.06 0 0 0-56 56v240a56.06 56.06 0 0 0 56 56h236a56.06 56.06 0 0 0 56-56V136a56.06 56.06 0 0 0-56-56zm-14.18 92.63-144 112a16 16 0 0 1-19.64 0l-144-112a16 16 0 1 1 19.64-25.26L256 251.73l134.18-104.36a16 16 0 0 1 19.64 25.26z"
                     ></path>
                   </svg>
                   <span>lathieuhuan52@gmail.com</span>
@@ -96,7 +105,7 @@
           </section>
 
           <section id="education">
-            <h3>Education</h3>
+            <h2>Education</h2>
             <div class="section-content flex items-start">
               <svg
                 stroke="currentColor"
@@ -121,30 +130,21 @@
           </section>
         </div>
       </div>
-
-      <div id="right-col">
-        <section>
+      
+      <div id="right-column">
+        <section id="introduction">
           <h1>La Thiệu Huân</h1>
           <p class="title">Front End Developer</p>
-        </section>
-
-        <section class="about-me">
-          <h2>About me</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ad
-            possimus, recusandae, aperiam magni eos explicabo rerum modi quod
-            doloribus consequatur, deleniti enim ratione! Vitae amet placeat
-            nisi culpa vel.
-          </p>
+          <p class="about-me">I love making usefull and beautiful products.</p>
         </section>
 
         <section>
-          <h3>Experience</h3>
+          <h2>Experience</h2>
           <div>Experience</div>
         </section>
 
         <section>
-          <h3>Projects</h3>
+          <h2>Projects</h2>
           <div>Projects</div>
         </section>
       </div>
