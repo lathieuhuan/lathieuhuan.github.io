@@ -44,7 +44,7 @@ li {
 
 main {
   margin: 0 auto;
-  width: 800px;
+  width: 880px;
   max-width: 100%;
   min-height: 100vh;
   display: flex;
@@ -80,6 +80,11 @@ main {
   flex-direction: column;
   gap: 2rem;
   color: #fff;
+
+  *::selection {
+    background-color: #ebd31b;
+    color: black;
+  }
 
   h2 {
     border-bottom: 1px solid #fff;
@@ -157,7 +162,8 @@ main {
 }
 
 #introduction {
-  padding: calc(var(--main-padding) + 1rem) var(--main-padding);
+  padding-top: calc(var(--main-padding) + 1rem);
+  padding-bottom: 2rem;
   color: #f0faf6;
   position: relative;
 
@@ -171,14 +177,60 @@ main {
     left: calc(0px - var(--left-column-width) - var(--main-padding));
     background-color: var(--color-primary);
   }
+
+  .title {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .about-me {
+    margin-top: 1.5rem;
+    line-height: 1.6;
+  }
 }
 
-.title {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
+#experience {
+  .section-content {
+    margin-top: 0.5rem;
+  }
 
-.about-me {
-  margin-top: 1.5rem;
-  font-size: 1rem;
+  .experience-item {
+  }
+
+  .employer-logo {
+    display: flex;
+    width: 3.75rem;
+    min-width: 3.75rem;
+    height: 3.75rem;
+    padding: 0.25rem;
+  }
+
+  .general-info {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .employer {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .employment-period {
+      padding: 1px 0.25rem;
+      background-color: #c9ddf8;
+      border-radius: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .employment-title {
+      font-weight: 500;
+    }
+  }
+
+  .description {
+    margin-top: 0.5rem;
+  }
 }
