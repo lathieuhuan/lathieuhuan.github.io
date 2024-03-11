@@ -27,7 +27,13 @@ h1 {
 h2 {
   padding-bottom: 0.25rem;
   font-size: 1.125rem;
-  border-radius: 0.125rem;
+  color: var(--color-h2);
+  border-bottom: 1px solid var(--color-h2);
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 p,
@@ -51,17 +57,31 @@ main {
   background-color: #fff;
   border-radius: 0.375rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: -20;
   overflow: hidden;
 }
 
 #left-column {
+  position: relative;
+  z-index: 20;
+  flex-shrink: 0;
   padding-top: var(--main-padding);
   padding-left: var(--main-padding);
   width: var(--left-column-width);
-  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
+
+#right-column {
+  position: relative;
+  z-index: 10;
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ===== LEFT COL STYLE ===== */
 
 #brief-info,
 #avatar {
@@ -70,95 +90,76 @@ main {
 }
 
 #avatar {
-  height: calc(var(--left-column-width) - var(--main-padding));
+  min-height: calc(var(--left-column-width) - var(--main-padding));
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }
 
 #brief-info {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   color: #fff;
-
-  *::selection {
-    background-color: #ebd31b;
-    color: black;
-  }
-
-  h2 {
-    border-bottom: 1px solid #fff;
-  }
-
-  .section-content {
-    padding-left: 0.25rem;
-    font-weight: 500;
-  }
-
-  svg {
-    font-size: 1rem;
-    flex-shrink: 0;
-    margin-right: 0.5rem;
-  }
+  --color-h2: #fff;
+}
+#brief-info *::selection {
+  background-color: #ebd31b;
+  color: black;
+}
+#brief-info .section-content {
+  padding-left: 0.25rem;
+  font-weight: 500;
+}
+#brief-info svg {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
 }
 
-#skills {
-  ul {
-    margin-top: 0.5rem;
-    list-style: inside;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  li span {
-    font-size: 1rem;
-    position: relative;
-    left: -8px;
-  }
+#skills .section-content {
+  margin-top: 0.5rem;
+  list-style: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#skills li span {
+  font-size: 1rem;
+  position: relative;
+  left: -8px;
 }
 
-#contact {
-  ul {
-    margin-top: 0.75rem;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
+#contact .section-content {
+  margin-top: 0.75rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-#education {
-  .section-content {
-    margin-top: 0.75rem;
-  }
-  .education-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-  .university {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1;
-  }
+#education .section-content {
+  margin-top: 0.75rem;
 }
+#education .education-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+#education .education-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ===== LEFT COL STYLE ===== */
 
 #right-column {
-  flex-grow: 1;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-
-  section {
-    padding-left: var(--main-padding);
-    padding-right: var(--main-padding);
-  }
-
-  h2 {
-    color: var(--color-primary-variant);
-    border-bottom: 1px solid var(--color-primary-variant);
-  }
+  --color-h2: var(--color-primary-variant);
+}
+#right-column section {
+  padding-left: var(--main-padding);
+  padding-right: var(--main-padding);
 }
 
 #introduction {
@@ -166,71 +167,74 @@ main {
   padding-bottom: 2rem;
   color: #f0faf6;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -10;
-    left: calc(0px - var(--left-column-width) - var(--main-padding));
-    background-color: var(--color-primary);
-  }
-
-  .title {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-
-  .about-me {
-    margin-top: 1.5rem;
-    line-height: 1.6;
-  }
+}
+#introduction::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+  left: calc(0px - var(--left-column-width) - var(--main-padding));
+  background-color: var(--color-primary);
+}
+#introduction .career-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+#introduction .about-me {
+  margin-top: 1.5rem;
+  line-height: 1.6;
 }
 
-#experience {
-  .section-content {
-    margin-top: 0.5rem;
-  }
+#right-column .section-content {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: 500;
+}
 
-  .experience-item {
-  }
+#right-column .section-content-intro {
+  display: flex;
+  gap: 0.5rem;
+}
+#right-column .section-content-logo {
+  display: flex;
+  width: 3.75rem;
+  min-width: 3.75rem;
+  height: 3.75rem;
+  padding: 0.25rem;
+}
+#right-column .section-content-general {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .employer-logo {
-    display: flex;
-    width: 3.75rem;
-    min-width: 3.75rem;
-    height: 3.75rem;
-    padding: 0.25rem;
-  }
+#right-column .period {
+  display: inline-block;
+  padding: 1px 0.25rem;
+  background-color: #c9ddf8;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
 
-  .general-info {
-    margin-left: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+#right-column .tech-stack {
+  margin-top: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+#right-column .tech-stack > * {
+  display: inline-block;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  background-color: #fbc9c5;
+}
 
-    .employer {
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-
-    .employment-period {
-      padding: 1px 0.25rem;
-      background-color: #c9ddf8;
-      border-radius: 0.25rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-
-    .employment-title {
-      font-weight: 500;
-    }
-  }
-
-  .description {
-    margin-top: 0.5rem;
-  }
+#right-column .section-content-description {
+  margin-top: 0.5rem;
 }
