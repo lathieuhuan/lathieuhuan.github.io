@@ -76,9 +76,10 @@ main {
   z-index: 10;
   flex-grow: 1;
   height: 100%;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 /* ===== LEFT COL STYLE ===== */
@@ -222,7 +223,7 @@ main {
 }
 
 #right-column .tech-stack {
-  margin-top: 0.25rem;
+  margin-top: 0.375rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
@@ -237,4 +238,18 @@ main {
 
 #right-column .section-content-description {
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#right-column .section-content-description p {
+  text-indent: 1rem;
+}
+
+#right-column ul {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
