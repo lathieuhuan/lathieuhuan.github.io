@@ -69,6 +69,7 @@ main {
   width: var(--left-column-width);
   display: flex;
   flex-direction: column;
+  --color-h2: #fff;
 }
 
 #right-column {
@@ -80,84 +81,72 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  --color-h2: var(--color-primary-variant);
 }
 
 /* ===== LEFT COL STYLE ===== */
 
-#brief-info,
-#avatar {
+#avatar,
+#brief-info {
   padding: 1rem;
   background-color: var(--color-primary-variant);
 }
-
 #avatar {
   min-height: calc(var(--left-column-width) - var(--main-padding));
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }
-
 #brief-info {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   color: #fff;
-  --color-h2: #fff;
 }
 #brief-info *::selection {
   background-color: #ebd31b;
   color: black;
 }
-#brief-info .section-content {
-  padding-left: 0.25rem;
+
+#left-column .section-content {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   font-weight: 500;
 }
-#brief-info svg {
+#left-column svg {
   font-size: 1rem;
   flex-shrink: 0;
   margin-right: 0.5rem;
 }
 
-#skills .section-content {
-  margin-top: 0.5rem;
-  list-style: inside;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+#skills .section-content,
+#achievements .section-content {
+  padding-left: 1.25rem;
 }
-#skills li span {
-  font-size: 1rem;
-  position: relative;
-  left: -8px;
+
+.achievements_title {
+  font-weight: 700;
 }
 
 #contact .section-content {
-  margin-top: 0.75rem;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
-#education .section-content {
-  margin-top: 0.75rem;
-}
-#education .education-info {
+.education__general-info {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
-#education .education-title {
+.education__title {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1;
 }
 
-/* ===== LEFT COL STYLE ===== */
+/* ===== RIGHT COL STYLE ===== */
 
-#right-column {
-  --color-h2: var(--color-primary-variant);
-}
 #right-column section {
   padding-left: var(--main-padding);
   padding-right: var(--main-padding);
@@ -189,31 +178,30 @@ main {
 }
 
 #right-column .section-content {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   font-weight: 500;
 }
 
-#right-column .section-content-intro {
+.experience__intro {
   display: flex;
   gap: 0.5rem;
 }
-#right-column .section-content-logo {
+.experience__enterprise-logo {
   display: flex;
   width: 3.75rem;
   min-width: 3.75rem;
   height: 3.75rem;
   padding: 0.25rem;
 }
-#right-column .section-content-general {
+.experience__general-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
-#right-column .period {
+.experience__period {
   display: inline-block;
   padding: 1px 0.25rem;
   background-color: #c9ddf8;
@@ -221,14 +209,17 @@ main {
   font-size: 0.75rem;
   font-weight: 500;
 }
+.experience__description {
+  margin-top: 0.5rem;
+}
 
-#right-column .tech-stack {
+.projects__tech-stack {
   margin-top: 0.375rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
 }
-#right-column .tech-stack > * {
+.projects__tech-stack > * {
   display: inline-block;
   padding: 0 0.5rem;
   border-radius: 0.25rem;
@@ -236,19 +227,17 @@ main {
   background-color: #fbc9c5;
 }
 
-#right-column .section-content-description {
+.projects__description {
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-
-#right-column .section-content-description p {
+.projects__description p {
   text-indent: 1rem;
 }
-
-#right-column ul {
-  padding-left: 1rem;
+.projects__description ul {
+  padding-left: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
