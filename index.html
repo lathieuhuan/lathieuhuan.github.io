@@ -15,6 +15,9 @@
     <title>La Thieu Huan's Resume</title>
   </head>
   <body>
+    <script src="https://unpkg.com/i18next/dist/umd/i18next.js"></script>
+    <script defer src="index.js"></script>
+
     <main>
       <div id="left-column">
         <div id="avatar">
@@ -29,22 +32,22 @@
         </div>
 
         <div id="brief-info">
-          <section id="skills">
-            <h2>Skills</h2>
+          <section id="tech-skills">
+            <h2>Technical skills</h2>
             <ul class="section-content">
               <li>Javascript, Typescript</li>
               <li>HTML, CSS</li>
               <li>ReactJS</li>
               <li>Angular</li>
               <li>Version Control</li>
-              <li>Figma</li>
             </ul>
           </section>
 
-          <section id="soft-skills">
-            <h2>Soft skills</h2>
+          <section id="other-skills">
+            <h2>Other skills</h2>
             <ul class="section-content">
-              <li>English</li>
+              <li>English reading & communication</li>
+              <li>UI Design in Figma</li>
             </ul>
           </section>
 
@@ -252,8 +255,11 @@
                   <img src="/images/om-logo.png" alt="om" />
                 </div>
                 <div class="experience__general-info">
-                  <h3>One Mount Group</h3>
-                  <span class="experience__period">06/2022 - Present</span>
+                  <div class="experience__title-n-time">
+                    <h3>One Mount Group</h3>
+                    <span class="experience__period">06/2022 - Present</span>
+                  </div>
+                  <div class="experience__position">Front-end Developer</div>
                 </div>
               </div>
 
@@ -262,16 +268,19 @@
                 Engineer" in One Mount Group. After less than a month, I was
                 entitled to participate in large real-world projects which are
                 "TCB OPS Portal" and "Retail Partnership". I received Star
-                Engineer of the Month Silver Award in 11/2022 and officially
-                joined the ranks of OM's Software Engineers in 12/2022.
+                Engineer of the Month Silver Award from One Mount in 11/2022,
+                and officially joined their ranks of Software Engineers in
+                12/2022.
               </p>
             </div>
 
             <div>
               <div class="experience__intro">
                 <div class="experience__general-info">
-                  <h3>Non-technical jobs</h3>
-                  <span class="experience__period">11/2018 - 09/2020</span>
+                  <div class="experience__title-n-time">
+                    <h3>Non-technical jobs</h3>
+                    <span class="experience__period">11/2018 - 09/2020</span>
+                  </div>
                 </div>
               </div>
 
@@ -299,7 +308,7 @@
                 <p>
                   TCB OPS Portal is a web application for operating a Loyalty
                   system we develop for our partner TCB. I am in the E-voucher
-                  team, my job includes:
+                  team, my jobs include:
                 </p>
                 <ul>
                   <li>
@@ -309,7 +318,10 @@
                   <li>
                     Building core components to be used among front-end teams.
                   </li>
-                  <li>Discussing with the designer to ensure smooth UX.</li>
+                  <li>
+                    Brainstorming and discussing with the designer to ensure
+                    smooth UI/UX.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -318,26 +330,34 @@
               <div class="projects_intro">
                 <h3>Retail Partnership</h3>
                 <div class="projects__tech-stack">
-                  ReactJS, Typescript, Redux, TailwindCSS, Ant Design
+                  ReactJS, Typescript, Redux, TailwindCSS, react-hook-form, Ant
+                  Design
                 </div>
               </div>
 
               <div class="projects__description">
                 <p>
-                  Retail Partnership, a POS system, was the first project I
-                  joined in One Mount. I have learned so much from this
-                  experience like how to work in a team, how to read a large
-                  front-end codebase, how to understand and debug other people's
-                  code... It was challenging since the progress was pushed
-                  really hard, but I managed to catch up with the team and
-                  contributed to the project.
+                  Retail Partnership was a system we developed for an enterprise
+                  customer to help manage their supermarket chain. I worked on
+                  the POS system of this project. Some of its features were:
                 </p>
+                <ul>
+                  <li>
+                    Multiple carts management. The cashier can scan, search, add
+                    products and all types of promotions.
+                  </li>
+                  <li>
+                    The ability to checkout carts with multiple payment methods
+                    like cash, e-wallet, bank transfer at the same time.
+                  </li>
+                  <li>View and export histories and reports.</li>
+                </ul>
               </div>
             </div>
 
             <div>
               <div class="projects_intro">
-                <h3>Genshin Damage Calculator</h3>
+                <h3>GI Damage Calculator</h3>
                 <div class="projects__tech-stack">
                   ReactJS, Typescript, Redux, TailwindCSS
                 </div>
@@ -349,31 +369,44 @@
 
               <div class="projects__description">
                 <p>
-                  Genshin Damage Calculator is a web application that aims to
-                  help players from the open-world game Genshin Impact to
-                  achieve the highest damage for their characters. It daily
-                  serves 600-800 users worldwide in low months. The traffic
-                  spike can exceed 1,000 daily visitors in high months.
+                  GI Damage Calculator is a web application that aims to help
+                  players from the game Genshin Impact to build their
+                  characters. It daily serves 600-800 users worldwide but the
+                  traffic spike can exceed 2,000 when there is an upcoming game
+                  update.
                 </p>
                 <p>
-                  The application takes user inputs such as character's and
-                  item's attributes to combine and calculate the final damage in
-                  some specific scenarios. It is also able to compare the result
-                  damage in different scenarios, and save user data for the next
-                  visits.
+                  I started GI Damage Calculator as a project for learning and
+                  practicing. Through it I have:
                 </p>
+                <ul>
+                  <li>
+                    Accumulated extensive experience in Javascript, Typescript,
+                    and CSS.
+                  </li>
+                  <li>Deeply learned how ReactJS APIs work.</li>
+                  <li>
+                    Learned how to effectively display hundreds of items with
+                    image to the users.
+                  </li>
+                </ul>
+              </div>
 
+              <div class="projects__links">
                 <p>
-                  I started this project as a place for learning and practicing
-                  my front-end skills. Soon I began to enjoy designing and
-                  developing it to be a useful, beautiful and intuitive web
-                  application.
+                  <b>Application link:</b>
+                  <a href="https://gidmgcalculator.web.app" target="_blank">
+                    https://gidmgcalculator.web.app
+                  </a>
                 </p>
                 <p>
-                  Through this project I have deeply learned how ReactJS APIS
-                  work, how to effectively display hundreds of items with image
-                  to the users, and accumulated extensive experience in
-                  Javascript, Typescript, and CSS.
+                  <b>Project link:</b>
+                  <a
+                    href="https://github.com/lathieuhuan/gidmgcalculator"
+                    target="_blank"
+                  >
+                    https://github.com/lathieuhuan/gidmgcalculator
+                  </a>
                 </p>
               </div>
             </div>

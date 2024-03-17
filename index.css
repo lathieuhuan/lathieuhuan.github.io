@@ -117,8 +117,8 @@ main {
   margin-right: 0.5rem;
 }
 
-#skills .section-content,
-#soft-skills .section-content,
+#tech-skills .section-content,
+#other-skills .section-content,
 #achievements .section-content {
   padding-left: 1.25rem;
 }
@@ -201,10 +201,19 @@ main {
   padding: 0.25rem;
 }
 .experience__general-info {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
+.experience__title-n-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.experience__position {
+  font-size: 1rem;
+}
+
 .experience__period {
   display: inline-block;
   padding: 1px 0.25rem;
@@ -246,4 +255,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.projects__links {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
