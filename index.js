@@ -14,15 +14,13 @@ i18next.init({
   },
 });
 
-console.log(i18next);
+// function translate() {
+//   document.querySelector(".about-me").innerHTML = i18next.t("ABOUT_ME");
+// }
 
-function translate() {
-  // document.querySelector(".about-me").innerHTML = i18next.t("ABOUT_ME");
-}
+// document.querySelector("h1").addEventListener("click", () => {
+//   i18next.changeLanguage("vi");
+//   translate();
+// });
 
-document.querySelector("h1").addEventListener("click", () => {
-  i18next.changeLanguage("vi");
-  translate();
-});
-
-translate();
+// translate();
