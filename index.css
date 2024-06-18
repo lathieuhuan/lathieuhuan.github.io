@@ -11,8 +11,8 @@
   --main-padding: 2rem;
   --color-primary-1: #051427;
   --color-primary-2: #c9ddf8;
-  --color-primary-3: #175cb5;
-  --color-secondary: #b10b14;
+  --color-primary-3: #0054ac;
+  --color-secondary: #d62e00;
   --color-on-light: #050505;
   color: var(--color-on-light);
   background-color: #f0f5f2;
@@ -31,7 +31,7 @@ h2 {
 }
 h3 {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .flex {
@@ -51,7 +51,7 @@ main {
   min-height: 100vh;
   display: flex;
   font-size: 0.875rem;
-  background-color: #fff;
+  background-color: #fafcff;
   border-radius: 0.375rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   overflow: auto;
@@ -181,7 +181,7 @@ main {
   margin-top: 0.75rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
   font-weight: 500;
 }
 
@@ -236,8 +236,9 @@ main {
   background-color: var(--color-primary-3);
 }
 .projects__tech-stack {
-  font-size: 0.75rem;
   color: var(--color-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .projects__description {
